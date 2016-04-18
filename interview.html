@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Article Scorer</title>
+		<link rel="stylesheet" type="text/css" href="//tools.wmflabs.org/deadlinks/css/index.css">
+	</head>
+	<body> 
+		<div id="form-div">
+			<form name="f1" method="get">
+				Category: 
+				<input type="text" name="category" value="{{{category}}}">
+
+				Article Count Limit: 
+				<input type="text" name="limit" value="{{{limit}}}">
+				(can be "max")
+				<input type="submit" name="submit" id="submit" value="Score Articles" />
+			</form>
+		</div>
+		<table id="results">
+			<tr>
+				<th>Article</th>
+				<th>Score</th>
+				<th>1st Paragraph Analyzed</th>
+			</tr>
+			{{{table}}}
+		</table>
+	</body>
+</html>
