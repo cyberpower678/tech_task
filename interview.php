@@ -1,4 +1,5 @@
 <?php
+
 $table = "";
 
 if( isset( $_GET['category'] ) && isset( $_GET['limit'] ) ) {
@@ -65,7 +66,7 @@ function scoreArticles( $category, $limit ) {
 				}
 			} while( $extractResume !== false);
 		} 
-	} while( $articleResume !== false && ( (int) $limit > 0 || $limit == "max" ) );
+	} while( $articleResume !== false && ( (int) $limit > 0 || (string) $limit == "max" ) );
 	arsort( $scores ); 					//Sort the scores in ascending order
 	foreach( $scores as $id=>$score ) {
 		$returnArray[] = array( 'title'=>$articles[$id], 'paragraph'=>$paragraphs[$id], 'score'=>$score ); 	//Put them together
